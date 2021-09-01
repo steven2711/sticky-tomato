@@ -1,0 +1,41 @@
+@import "../../styles/main.scss";
+
+.container {
+  width: 100%;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    height: 5rem;
+    background-color: $green;
+    padding: 0.5rem 2rem;
+
+    .imageContainer {
+      width: 20%;
+      position: relative;
+      border: 1px solid blue;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: $soft-white;
+      border: 1px solid blue;
+      height: 100%;
+      width: 60%;
+
+      li {
+        a {
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+        }
+      }
+    }
+  }
+}
