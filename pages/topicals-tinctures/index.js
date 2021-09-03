@@ -3,8 +3,9 @@ import ProductCard from "../../components/Products/ProductCard/ProductCard";
 import Layout from "../../components/Layout/Layout";
 import { NEXT_URL } from "../../config/index";
 import Button from "../../components/Button/button";
+import products from "../../data/products.json";
 
-export default function TopicalsAndTincturesPage({ data: { data } }) {
+export default function TopicalsAndTincturesPage({ data }) {
   return (
     <Layout>
       <Button text="go back" />
@@ -18,8 +19,9 @@ export default function TopicalsAndTincturesPage({ data: { data } }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${NEXT_URL}/api/products?filter=topicals-tinctures`);
-  const data = await res.json();
+  const data = products.filter(
+    (product) => product.category === "topicals-tinctures"
+  );
 
   return {
     props: { data },

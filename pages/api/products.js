@@ -2,8 +2,6 @@
 const products = require("../../data/products");
 
 export default function handler(req, res) {
-  console.log(req.query);
-
   if (req.method !== "GET") {
     return res.status(405).json({ success: false, msg: "Method not allowed." });
   }
@@ -19,18 +17,18 @@ export default function handler(req, res) {
     "coa",
   ];
 
-  if (filters.includes(req.query.filter)) {
-    const data = products.filter(
-      (product) => product.category === req.query.filter
-    );
+  // if (filters.includes(req.query.filter)) {
+  //   const data = products.filter(
+  //     (product) => product.category === req.query.filter
+  //   );
 
-    return res.status(200).json({ success: true, data });
-  }
+  //   return res.status(200).json({ success: true, data });
+  // }
 
   // Get product data from Supabase
   //
   //
   //
   // all test data
-  res.status(200).json({ success: true, data: products });
+  res.status(200).json({ success: true });
 }

@@ -3,8 +3,9 @@ import styles from "../../styles/pages/AccessoriesPage.module.scss";
 import Layout from "../../components/Layout/Layout";
 import { NEXT_URL } from "../../config/index";
 import Button from "../../components/Button/button";
+import products from "../../data/products.json";
 
-export default function AccessoriesPage({ data: { data } }) {
+export default function AccessoriesPage({ data }) {
   return (
     <Layout>
       <Button text="go back" />
@@ -18,8 +19,7 @@ export default function AccessoriesPage({ data: { data } }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${NEXT_URL}/api/products?filter=accessories`);
-  const data = await res.json();
+  const data = products.filter((product) => product.category === "accessories");
 
   return {
     props: { data },
