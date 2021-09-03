@@ -10,6 +10,7 @@ export default function Layout({
   children,
   noIndex,
   url,
+  footer,
 }) {
   return (
     <>
@@ -49,9 +50,8 @@ export default function Layout({
 
         {noIndex ? <meta name="robots" content="noindex,nofollow" /> : null}
       </Head>
-      <Header />
       <main>{children}</main>
-      <Footer />
+      {footer ? <Footer /> : null}
     </>
   );
 }
