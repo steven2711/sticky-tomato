@@ -1,0 +1,30 @@
+@import "../../../styles/main.scss";
+
+.card {
+  border: 1px solid red;
+
+  @include for-phone-only {
+    height: 12rem;
+  }
+
+  @include for-tablet-portrait-up {
+    height: 15rem;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 15rem;
+  }
+
+  @include for-desktop-up {
+    height: 20rem;
+  }
+
+  @include for-big-desktop-up {
+    max-width: 400px;
+  }
+
+  .cardHeader {
+    position: relative;
+    height: 100%;
+  }
+}

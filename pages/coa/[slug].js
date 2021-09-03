@@ -1,9 +1,9 @@
-import Product from "../../components/Product/Product";
+import ProductPageTemplate from "../../components/Products/ProductPageTemplate/ProductPageTemplate";
 
 export default function CoaProductPage() {
   return (
     <div>
-      <Product />
+      <ProductPageTemplate />
     </div>
   );
 }
