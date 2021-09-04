@@ -7,7 +7,7 @@ export default function ProductCard({ data: { name, images, price } }) {
     <div className={styles.card}>
       <div className={styles.cardHeader}>
         <Image
-          src={images[0]}
+          src={images[1]}
           layout="fill"
           objectFit="cover"
           className={styles.image}
