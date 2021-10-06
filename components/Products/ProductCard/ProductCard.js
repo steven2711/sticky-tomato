@@ -2,12 +2,16 @@ import styles from "./ProductCard.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function ProductCard({ data: { name, images, price } }) {
+export default function ProductCard({ product }) {
+  console.log(product);
+
+  // const defaultImage = `${process.env.NEXT_PUBLIC_STRAPI_URL}${images[0].formats.small.url}`;
+
   return (
     <div className={styles.card}>
-      <div className={styles.cardHeader}>
+      {/* <div className={styles.cardHeader}>
         <Image
-          src={images[1]}
+          src={defaultImage}
           layout="fill"
           objectFit="cover"
           className={styles.image}
@@ -16,7 +20,7 @@ export default function ProductCard({ data: { name, images, price } }) {
       <div className={styles.cardBody}>
         <h2>{name}</h2>
         <p>{price}</p>
-      </div>
+      </div> */}
     </div>
   );
 }

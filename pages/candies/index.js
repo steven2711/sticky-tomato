@@ -1,17 +1,16 @@
 import styles from "../../styles/pages/CandiesPage.module.scss";
 import ProductCard from "../../components/Products/ProductCard/ProductCard";
 import Layout from "../../components/Layout/Layout";
-import { NEXT_URL } from "../../config/index";
 import Button from "../../components/Button/button";
-import products from "../../data/products.json";
+import { getAllProductsFromCategory } from "../../lib/products";
 
-export default function CandiesPage({ data }) {
+export default function CandiesPage({ products }) {
   return (
     <Layout>
       <Button text="go back" />
       <section className={`productsPageDisplay ${styles.container}`}>
-        {data.map((product, index) => {
-          return <ProductCard key={index} data={product} />;
+        {products.map((product, index) => {
+          return <ProductCard key={index} product={product} />;
         })}
       </section>
     </Layout>
@@ -19,9 +18,8 @@ export default function CandiesPage({ data }) {
 }
 
 export const getStaticProps = async () => {
-  const data = products.filter((product) => product.category === "candies");
-
+  const products = await getAllProductsFromCategory("candies");
   return {
-    props: { data },
+    props: { products },
   };
 };
