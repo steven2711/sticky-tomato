@@ -1,7 +1,12 @@
+import Layout from "../../components/Layout";
 import { getAllProductsFromCategory } from "../../lib/products";
 
 export default function TopicalsAndTincturesPage({ products }) {
-  return <h1>topicals and tinctures</h1>;
+  return (
+    <Layout>
+      <h1>topicals and tinctures</h1>
+    </Layout>
+  );
 }
 
 export const getStaticProps = async () => {

@@ -1,7 +1,9 @@
+import Layout from "../../components/Layout";
+
 export default function CandyProductPage() {
   return (
-    <div>
+    <Layout>
       <h1>candy product page</h1>
-    </div>
+    </Layout>
   );
 }

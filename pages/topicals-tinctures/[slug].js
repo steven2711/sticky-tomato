@@ -1,9 +1,9 @@
-import ProductPageTemplate from "../../components/Products/ProductPageTemplate/ProductPageTemplate";
+import Layout from "../../components/Layout";
 
 export default function TopicalsAndTincturesProductPage() {
   return (
-    <div>
+    <Layout>
       <h1>product page</h1>
-    </div>
+    </Layout>
   );
 }

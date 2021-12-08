@@ -1,7 +1,12 @@
+import Layout from "../../components/Layout";
 import products from "../../data/products.json";
 
 export default function ChocolatesPage({ data }) {
-  return <h1>chocolates page</h1>;
+  return (
+    <Layout>
+      <h1>chocolates page</h1>
+    </Layout>
+  );
 }
 
 export const getStaticProps = async () => {
