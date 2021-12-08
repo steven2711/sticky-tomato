@@ -1,9 +1,7 @@
-import ProductPageTemplate from "../../components/Products/ProductPageTemplate/ProductPageTemplate";
-
 export default function AccessoryProductPage() {
   return (
     <div>
-      <ProductPageTemplate />
+      <h1>accessories product page</h1>
     </div>
   );
 }

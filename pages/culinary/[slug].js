@@ -3,7 +3,7 @@ import ProductPageTemplate from "../../components/Products/ProductPageTemplate/P
 export default function CulinaryProductPage() {
   return (
     <div>
-      <ProductPageTemplate />
+      <h1>product page</h1>
     </div>
   );
 }

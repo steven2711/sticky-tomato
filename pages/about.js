@@ -1,14 +1,23 @@
-import styles from "../styles/pages/AboutPage.module.scss";
 import Layout from "../components/Layout/Layout";
 import Button from "../components/Button/button";
+import styled from "styled-components";
+import { Container } from "reactstrap";
 
 export default function AboutPage() {
   return (
     <Layout>
       <Button text="go back" />
-      <section className={styles.container}>
+      <Container>
         <h1>About page</h1>
-      </section>
+      </Container>
     </Layout>
   );
 }
+
+// const Container = styled.section`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+// `;

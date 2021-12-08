@@ -3,7 +3,7 @@ import ProductPageTemplate from "../../components/Products/ProductPageTemplate/P
 export default function PetProductPage() {
   return (
     <div>
-      <ProductPageTemplate />
+      <h1>chocolate page template</h1>
     </div>
   );
 }

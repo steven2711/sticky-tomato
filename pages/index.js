@@ -1,10 +1,10 @@
-import Layout from "../components/Layout/Layout";
-import Header from "../components/Header/Header";
-
 export default function Home() {
   return (
-    <Layout>
-      <Header />
-    </Layout>
+    <div>
+      <h1>hello</h1>
+    </div>
+    // <Layout>
+    //   <Header />
+    // </Layout>
   );
 }
