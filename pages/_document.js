@@ -15,6 +15,8 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed&display=swap"
             rel="stylesheet"
           />
+          <meta name="mobile-wep-app-capable" content="yes" />
+          <meta name="apple-mobile-wep-app-capable" content="yes" />
           <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
