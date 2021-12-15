@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Main from "../styles/elements/Main";
+
+import styled from "styled-components";
 
 export default function Layout({
   title,
@@ -7,6 +10,7 @@ export default function Layout({
   description,
   imagePath,
   url,
+  background,
 }) {
   return (
     <>
@@ -68,10 +72,15 @@ export default function Layout({
         {/* Rich Search Result Scripts */}
       </Head>
 
-      <main>{children}</main>
+      <MAIN background={background}>{children}</MAIN>
     </>
   );
 }
+
+const MAIN = styled(Main)`
+  background: ${(props) =>
+    `no-repeat center/cover url('/images/${props.background}')`};
+`;
 
 Layout.defaultProps = {
   title: "Sticky Tomato",
@@ -79,4 +88,5 @@ Layout.defaultProps = {
   description: "",
   imagePath: "",
   url: "",
+  background: "",
 };
