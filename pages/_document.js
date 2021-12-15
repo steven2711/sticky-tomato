@@ -28,8 +28,8 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="manifest" href="/manifest.json" />
-          <meta name="mobile-wep-app-capable" content="yes" />
-          <meta name="apple-mobile-wep-app-capable" content="yes" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
           {/* <link rel="apple-touch-icon" href="/apple-icon.png"></link> */}
           <meta name="theme-color" content="#317EFB" />
         </Head>
