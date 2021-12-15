@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout";
-import { getAllProductsFromCategory } from "../../lib/products";
 
 export default function TopicalsAndTincturesPage({ products }) {
   return (
@@ -9,10 +8,10 @@ export default function TopicalsAndTincturesPage({ products }) {
   );
 }
 
-export const getStaticProps = async () => {
-  const products = await getAllProductsFromCategory("topicals-tinctures");
+// export const getStaticProps = async () => {
+//   const products = await getAllProductsFromCategory("topicals-tinctures");
 
-  return {
-    props: { products },
-  };
-};
+//   return {
+//     props: { products },
+//   };
+// };
