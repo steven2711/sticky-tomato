@@ -88,5 +88,5 @@ Layout.defaultProps = {
   description: "",
   imagePath: "",
   url: "",
-  background: "",
+  background: "candy-bg.png",
 };
