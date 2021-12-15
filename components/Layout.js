@@ -1,6 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { getBgImageFromPath } from "../lib";
 import Main from "../styles/elements/Main";
-
+import { bgCategoryLegend } from "../styles/backgrounds";
 import styled from "styled-components";
 
 export default function Layout({
@@ -10,8 +13,11 @@ export default function Layout({
   description,
   imagePath,
   url,
-  background,
 }) {
+  const router = useRouter();
+
+  const bgImage = getBgImageFromPath(router.pathname, bgCategoryLegend);
+
   return (
     <>
       <Head>
@@ -72,14 +78,18 @@ export default function Layout({
         {/* Rich Search Result Scripts */}
       </Head>
 
-      <MAIN background={background}>{children}</MAIN>
+      <MAIN background={bgImage}>{children}</MAIN>
     </>
   );
 }
 
 const MAIN = styled(Main)`
+  position: relative;
+  overflow: hidden;
   background: ${(props) =>
-    `no-repeat center/cover url('/images/${props.background}')`};
+    `no-repeat center/cover url('/images/${
+      props.background || "candy-bg.png"
+    }')`};
 `;
 
 Layout.defaultProps = {
@@ -88,5 +98,4 @@ Layout.defaultProps = {
   description: "",
   imagePath: "",
   url: "",
-  background: "candy-bg.png",
 };
