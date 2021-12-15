@@ -15,6 +15,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed&display=swap"
             rel="stylesheet"
           />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />
