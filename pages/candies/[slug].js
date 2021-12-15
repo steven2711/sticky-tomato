@@ -1,9 +1,9 @@
-import ProductPageTemplate from "../../components/Products/ProductPageTemplate/ProductPageTemplate";
+import Layout from "../../components/Layout";
 
 export default function CandyProductPage() {
   return (
-    <div>
-      <ProductPageTemplate />
-    </div>
+    <Layout>
+      <h1>candy product page</h1>
+    </Layout>
   );
 }

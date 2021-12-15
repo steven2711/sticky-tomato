@@ -1,25 +1,24 @@
 import Head from "next/head";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import Main from "../styles/elements/Main";
+
+import styled from "styled-components";
 
 export default function Layout({
   title,
+  children,
   keywords,
   description,
   imagePath,
-  children,
-  noIndex,
   url,
-  footer,
+  background,
 }) {
   return (
     <>
       <Head>
         {/* HTML Meta Tags */}
         <title>{title}</title>
-        <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={description} />
 
         {/* Google Meta Tags */}
 
@@ -44,23 +43,50 @@ export default function Layout({
 
         {/* Google Search Console Verification */}
 
+        {/* <meta
+          name="google-site-verification"
+          content="-JvaYpKFpaQTbRpkLKV5DpaWlKRjs2Zwve8w-w3EZ44"
+        /> */}
+
         {/* Google Analytics*/}
+        {/* 
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
 
-        {/* No Index Tag */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        {noIndex ? <meta name="robots" content="noindex,nofollow" /> : null}
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        /> */}
+
+        {/* Rich Search Result Scripts */}
       </Head>
-      <main>{children}</main>
-      {footer ? <Footer /> : null}
+
+      <MAIN background={background}>{children}</MAIN>
     </>
   );
 }
 
+const MAIN = styled(Main)`
+  background: ${(props) =>
+    `no-repeat center/cover url('/images/${props.background}')`};
+`;
+
 Layout.defaultProps = {
   title: "Sticky Tomato",
-  description: "",
   keywords: "",
+  description: "",
   imagePath: "",
   url: "",
-  noIndex: false,
+  background: "",
 };

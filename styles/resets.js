@@ -1,3 +1,6 @@
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
 }
@@ -130,3 +133,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+`;
+
+export default GlobalStyle;

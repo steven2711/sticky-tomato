@@ -1,9 +1,9 @@
 import Layout from "../../components/Layout";
 
-export default function CulinaryProductPage() {
+export default function PetProductPage() {
   return (
     <Layout>
-      <h1>product page</h1>
+      <h1>chocolate page template</h1>
     </Layout>
   );
 }

@@ -1,9 +1,9 @@
-import ProductPageTemplate from "../../components/Products/ProductPageTemplate/ProductPageTemplate";
+import Layout from "../../components/Layout";
 
 export default function CoaProductPage() {
   return (
-    <div>
-      <ProductPageTemplate />
-    </div>
+    <Layout>
+      <h1>coa product page</h1>
+    </Layout>
   );
 }

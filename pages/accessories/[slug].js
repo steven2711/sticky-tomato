@@ -1,9 +1,9 @@
-import ProductPageTemplate from "../../components/Products/ProductPageTemplate/ProductPageTemplate";
+import Layout from "../../components/Layout";
 
 export default function AccessoryProductPage() {
   return (
-    <div>
-      <ProductPageTemplate />
-    </div>
+    <Layout>
+      <h1>accessories product page</h1>
+    </Layout>
   );
 }
