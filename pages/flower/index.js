@@ -7,6 +7,7 @@ export default function FlowerPage({ data }) {
   return (
     <Layout>
       <IMG src="images/flower.png" alt="Hemp" />
+      <BG_IMG src="images/flower-bg.png" alt="Flower Background" />
     </Layout>
   );
 }
@@ -22,6 +23,12 @@ const IMG = styled(Img)`
     bottom: -105px;
     right: -110px;
   }
+`;
+
+const BG_IMG = styled(Img)`
+  position: absolute;
+  top: 0;
+  z-index: -10;
 `;
 
 export const getStaticProps = async () => {

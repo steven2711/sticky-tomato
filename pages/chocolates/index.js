@@ -7,6 +7,7 @@ export default function ChocolatesPage({ data }) {
   return (
     <Layout>
       <IMG src="images/chocolate.png" alt="Chocolate" />
+      <BG_IMG src="images/chocolate-bg.png" alt="Chocolate Background" />
     </Layout>
   );
 }
@@ -22,6 +23,12 @@ const IMG = styled(Img)`
     bottom: -53px;
     left: -60px;
   }
+`;
+
+const BG_IMG = styled(Img)`
+  position: absolute;
+  top: 0;
+  z-index: -10;
 `;
 
 export const getStaticProps = async () => {

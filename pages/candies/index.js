@@ -8,6 +8,7 @@ export default function CandiesPage({ products }) {
   return (
     <Layout>
       <IMG src="images/grapefruit.png" alt="Grapefruit" />
+      <BG_IMG src="images/candy-bg.png" alt="Candy Background" />
     </Layout>
   );
 }
@@ -23,6 +24,12 @@ const IMG = styled(Img)`
     bottom: -37px;
     right: -55px;
   }
+`;
+
+const BG_IMG = styled(Img)`
+  position: absolute;
+  top: 0;
+  z-index: -10;
 `;
 
 export const getStaticProps = async () => {

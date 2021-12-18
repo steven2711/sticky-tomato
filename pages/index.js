@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import styled from "styled-components";
+import Img from "../styles/elements/Img";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Link href="/flower">Flower</Link>
         <Link href="/topicals-tinctures">Topicals &amp; Tinctures</Link>
       </Nav>
+      <IMG src="images/home-bg.png" alt="Candy BG" />
     </Layout>
   );
 }
@@ -25,4 +27,10 @@ const Nav = styled.div`
   a {
     padding: 30px 0;
   }
+`;
+
+const IMG = styled(Img)`
+  position: absolute;
+  top: 0;
+  z-index: -10;
 `;
